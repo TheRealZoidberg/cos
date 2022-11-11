@@ -159,6 +159,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../DayNight/DayNight.html">
+   Filtering out COS Data taken during the Day or Night
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../Extract/Extract.html">
    Editing the extraction boxes in a spectral extraction file (XTRACTAB)
   </a>
@@ -1167,7 +1172,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;astropy.visualization.units.quantity_support.&lt;locals&gt;.MplQuantityConverter at 0x7fbc355feaf0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;astropy.visualization.units.quantity_support.&lt;locals&gt;.MplQuantityConverter at 0x7f7728079490&gt;
 </pre></div>
 </div>
 </div>
@@ -1311,7 +1316,7 @@ where the NUV and FUV Data are contained in the obs_ids:</p>
  NAXIS   =                    0 / number of array dimensions                     
  EXTEND  =                    T                                                  
  NEXTEND =                    1 / Number of standard extensions                  
- DATE    = &#39;2022-03-04&#39;         / date this file was written (yyyy-mm-dd)        
+ DATE    = &#39;2022-09-23&#39;         / date this file was written (yyyy-mm-dd)        
  FILENAME= &#39;lcxv13050_x1dsum.fits&#39; / name of file                                
  FILETYPE= &#39;SCI      &#39;          / type of data found in data file                
                                                                                  
@@ -1327,9 +1332,9 @@ where the NUV and FUV Data are contained in the obs_ids:</p>
  &#39;...&#39;,
                / DIAGNOSTIC KEYWORDS                                             
                                                                                  
- PROCTIME=   5.964254436343E+04 / pipeline processing time (MJD)                 
- OPUS_VER= &#39;HSTDP 2021_5b               &#39; / data processing software system versi
- AWSYSVER= &#39;                            &#39; / cloud infrastructure package version )
+ PROCTIME=   5.984581608796E+04 / pipeline processing time (MJD)                 
+ OPUS_VER= &#39;HSTDP 2022_2                &#39; / data processing software system versi
+ AWSYSVER= &#39;v0.4.37 &#39;           / cloud infrastructure package version           )
 </pre></div>
 </div>
 </div>
@@ -1404,9 +1409,7 @@ We will then display all the fields contained in this data table using the <code
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Method 1 gets data as type: &lt;class &#39;astropy.io.fits.fitsrec.FITS_rec&#39;&gt;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Method 2 gets data as type: &lt;class &#39;astropy.io.fits.fitsrec.FITS_rec&#39;&gt;
+Method 2 gets data as type: &lt;class &#39;astropy.io.fits.fitsrec.FITS_rec&#39;&gt;
 Method 3 gets data as type: &lt;class &#39;astropy.table.table.Table&#39;&gt;
 
 Table of FUV data with columns:
@@ -1417,12 +1420,12 @@ Table of FUV data with columns:
 </pre></div>
 </div>
 <div class="output text_html"><div><i>Table length=2</i>
-<table id="table140446376990656" class="table-striped table-bordered table-condensed">
+<table id="table140149836955408" class="table-striped table-bordered table-condensed">
 <thead><tr><th>SEGMENT</th><th>EXPTIME</th><th>NELEM</th><th>WAVELENGTH</th><th>FLUX</th><th>ERROR</th><th>ERROR_LOWER</th><th>GROSS</th><th>GCOUNTS</th><th>VARIANCE_FLAT</th><th>VARIANCE_COUNTS</th><th>VARIANCE_BKG</th><th>NET</th><th>BACKGROUND</th><th>DQ</th><th>DQ_WGT</th></tr></thead>
 <thead><tr><th></th><th>s</th><th></th><th>Angstrom</th><th>erg / (Angstrom cm2 s)</th><th>erg / (Angstrom cm2 s)</th><th>ct / s</th><th>ct / s</th><th>ct</th><th>ct</th><th>ct</th><th>ct</th><th>ct / s</th><th>ct / s</th><th></th><th></th></tr></thead>
 <thead><tr><th>bytes4</th><th>float64</th><th>int32</th><th>float64[16384]</th><th>float32[16384]</th><th>float32[16384]</th><th>float32[16384]</th><th>float32[16384]</th><th>float32[16384]</th><th>float32[16384]</th><th>float32[16384]</th><th>float32[16384]</th><th>float32[16384]</th><th>float32[16384]</th><th>int16[16384]</th><th>float32[16384]</th></tr></thead>
-<tr><td>FUVA</td><td>6532.512</td><td>16384</td><td>1610.2408223563473 .. 1810.9448526534297</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>128 .. 128</td><td>0.0 .. 0.0</td></tr>
-<tr><td>FUVB</td><td>6532.512</td><td>16384</td><td>1421.946456029049 .. 1622.5958187765582</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>128 .. 128</td><td>0.0 .. 0.0</td></tr>
+<tr><td>FUVA</td><td>6532.512</td><td>16384</td><td>1610.240833382022 .. 1810.9448636791044</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>128 .. 128</td><td>0.0 .. 0.0</td></tr>
+<tr><td>FUVB</td><td>6532.512</td><td>16384</td><td>1421.9464241857759 .. 1622.5957869332851</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>128 .. 128</td><td>0.0 .. 0.0</td></tr>
 </table></div></div></div>
 </div>
 <p><strong>In the case of the FUV data, we see an astropy style table of 2 rows</strong> which are labeled FUVA and FUVB. These rows contain data from the 2 segments of FUV Detector (see figure 1.1).</p>
@@ -1766,8 +1769,8 @@ We’ll split the spectrum into “segments” of ~10 Angstroms, and plot these 
 <img alt="../../_images/ViewData_34_2.png" src="../../_images/ViewData_34_2.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----
 
-CPU times: user 19.9 s, sys: 924 ms, total: 20.8 s
-Wall time: 19.9 s
+CPU times: user 19.7 s, sys: 792 ms, total: 20.5 s
+Wall time: 19.7 s
 </pre></div>
 </div>
 </div>
@@ -2246,11 +2249,11 @@ Binned   Dataset Length is 2730
 </pre></div>
 </div>
 <div class="output text_html"><div><i>Table length=2</i>
-<table id="table140445826827168" class="table-striped table-bordered table-condensed">
+<table id="table140148922233472" class="table-striped table-bordered table-condensed">
 <thead><tr><th>EXPTIME</th><th>WAVELENGTH</th><th>FLUX</th><th>ERROR</th><th>ERROR_LOWER</th><th>GROSS</th><th>GCOUNTS</th></tr></thead>
 <thead><tr><th>float64</th><th>float64[2730]</th><th>float32[2730]</th><th>float32[2730]</th><th>float32[2730]</th><th>float32[2730]</th><th>float32[2730]</th></tr></thead>
-<tr><td>6532.512</td><td>1610.2714492302864 .. 1810.8652227811883</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td></tr>
-<tr><td>6532.512</td><td>1421.9770745608726 .. 1622.5162105938164</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td></tr>
+<tr><td>6532.512</td><td>1610.2714602559608 .. 1810.865233806863</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td></tr>
+<tr><td>6532.512</td><td>1421.9770427175997 .. 1622.516178750543</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td><td>0.0 .. 0.0</td></tr>
 </table></div></div></div>
 </div>
 <p><a id=SnrV></a></p>
@@ -2371,9 +2374,9 @@ Looking back to <a class="reference external" href="#fig2p4V">Fig. 2.4</a>, we s
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>First, Binning the data by  6
 function `bin_by_resel` is binning by 6
-In range on 0-th segment with limits: 1610.2714492302864 1810.8652227811883 
-Unweighted mean SNR over the range [1675, 1690] is: 8.131088256835938
-Out of range on 1-th segment with limits: 1421.9770745608726 1622.5162105938164
+In range on 0-th segment with limits: 1610.2714602559608 1810.865233806863 
+Unweighted mean SNR over the range [1675, 1690] is: 8.130635261535645
+Out of range on 1-th segment with limits: 1421.9770427175997 1622.516178750543
 </pre></div>
 </div>
 <img alt="../../_images/ViewData_68_1.png" src="../../_images/ViewData_68_1.png" />
@@ -2446,7 +2449,7 @@ authors. Follow these links for more information about citations:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processed at MJD = 59758.69871528
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processed at MJD = 59838.69371528
 Taken with 1 wavecal flashes
 
    MEMNAME        MEMTYPE     MEMPRSNT

@@ -32,7 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-query_1 = Observations.query_object(
-    "11:00:34.126 +71:38:02.80", radius="5 sec")
+['# Open the file we just wrote in "read" mode', "with open('./objectname_list.csv', 'r', newline='') as csvFile:", '    # This is the exact same list as `sourcelist`!', "    objList = list(reader(csvFile, delimiter=','))[0]", '']
+...
+["                                          'COS/FUV', 'COS/NUV'])  # query the area in +/- 5 arcminutes", '    # add this entry to the dictionary', '    globular_cluster_queries[obj] = (query_x)', '', 'globular_cluster_queries  # show the dictionary']
 -------------------
 

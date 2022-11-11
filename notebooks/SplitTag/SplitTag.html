@@ -157,6 +157,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../DayNight/DayNight.html">
+   Filtering out COS Data taken during the Day or Night
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../Extract/Extract.html">
    Editing the extraction boxes in a spectral extraction file (XTRACTAB)
   </a>
@@ -1119,11 +1124,11 @@ The cell attempts to set your <code class="docutils literal notranslate"><span c
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">Input In [9],</span> in <span class="ni">&lt;cell line: 17&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">17</span>
 <span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">found_lref</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lref&#39;</span><span class="p">))</span>
 <span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You already have an lref path in your environment variables -</span><span class="se">\</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span><span class="s2">  It&#39;s </span><span class="si">{</span><span class="n">found_lref</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">17</span> <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;lref&#39;</span><span class="p">]),</span> <span class="sa">f</span><span class="s2">&quot;The path to your lref directory is invalid (</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;lref&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">17</span> <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;lref&#39;</span><span class="p">]),</span> <span class="sa">f</span><span class="s2">&quot;The path to your lref directory is invalid (</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;lref&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">)&quot;</span> 
 
 <span class="nn">File /usr/share/miniconda/lib/python3.9/os.py:679,</span> in <span class="ni">_Environ.__getitem__</span><span class="nt">(self, key)</span>
 <span class="g g-Whitespace">    </span><span class="mi">676</span>     <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">encodekey</span><span class="p">(</span><span class="n">key</span><span class="p">)]</span>
